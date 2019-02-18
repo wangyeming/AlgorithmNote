@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class java_1_3 {
+public class java_1_3_1 {
 
     public static void main(String[] argv) {
         String str = "ABCA";
