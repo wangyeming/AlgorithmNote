@@ -7,15 +7,20 @@ def get_topK_minimum(data, k):
 def quick_select(data, k, left, right):
     if left >= right:
         return
-    print('quick_select', left, right, data)
+    print('-----quick_select-----', left, right, data[left:right + 1])
     i, j = left, right
+    pivot = data[right]
     while i < j:
-        while i < j and data[i] <= data[j]:
+        while i < j and data[i] <= pivot:
             i += 1
-        while i < j and data[j] >= data[i]:
+        if i < j:
+            data[i], data[j] = data[j], data[i]
+            print('swap ' + str(i) + '(' + str(data[i]) + ') and ' + str(j) + '(' + str(data[j]) + ') ' + str(data))
+        while i < j and data[j] >= pivot:
             j -= 1
-        print('swap ' + i + '(' + data[i] + ') and ' + 'j' + '(' + data[j] + ')')
-        data[i], data[j] = data[j], data[i]
+        if i < j:
+            data[i], data[j] = data[j], data[i]
+            print('swap ' + str(i) + '(' + str(data[i]) + ') and ' + str(j) + '(' + str(data[j]) + ') ' + str(data))
 
     if k <= i:
         quick_select(data, k, left, i - 1)
