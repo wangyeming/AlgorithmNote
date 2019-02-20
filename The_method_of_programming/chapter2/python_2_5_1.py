@@ -13,11 +13,12 @@ def fibonacci2(n):
     dp = [1, 1, 0]
     if n < 2:
         return 1
-    for i in range(n-1):
+    for i in range(n - 1):
         dp[2] = dp[0] + dp[1]
         dp[0] = dp[1]
         dp[1] = dp[2]
     return dp[2]
 
 
-print(fibonacci2(5))
+for i in range(1, 20):
+    print(fibonacci2(i))
