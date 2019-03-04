@@ -1,7 +1,9 @@
+package chapter2;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class JAVA_3 {
+public class JAVA_3_1 {
 
     public static void main(String[] argv) {
         int[] data = new int[]{1, 2, 3, 4, 5, 7, 8, 8, 9, 1, 2, 3, 4, 6, 6};
