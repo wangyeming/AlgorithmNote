@@ -1,21 +1,58 @@
 package chapter1;
 
-//给定一个字符串，逐个翻转字符串中的每个单词。
-//1. 无空格字符构成一个单词。
-//2. 输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。
-//3. 如果两个单词间有多余的空格，将反转后单词间的空格减少到只含一个。
+/**
+ * 翻转一句话中的单词
+ * <p>
+ * I am a student. => student. a am I
+ */
 public class java_1_1_2 {
 
     public static void main(String[] argv) {
-        Solution solution = new Solution();
-        String str = " I am a  student  ";
-        System.out.println(solution.reverseWords(str));
-//        str = "the sky is blue";
-//        System.out.println(solution.reverseWords(str));
-//        String str3 = "abc";
-//        System.out.println(solution.reverseWords(str3));
-//        String str4 = " ";
-//        System.out.println("result is|" + solution.reverseWords(str4) + "|end");
+        String str = "I am a student.";
+        char[] chars = str.toCharArray();
+        reverseWords(chars);
+        System.out.println(chars);
     }
 
+    public static void reverseWords(char[] str) {
+        if (str.length == 0) {
+            return;
+        }
+        int wordStart = -1;
+        for (int i = 0; i < str.length; i++) {
+            if (i == str.length - 1) {
+                //读到句末了
+                if (wordStart != -1) {
+                    reverseStr(str, wordStart, str.length - 1);
+                    break;
+                }
+            }
+            char s = str[i];
+            if (s == ' ') {
+                //读到空格了
+                if (wordStart == -1) {
+                    //连续空格，忽略
+                } else {
+                    //单词结束
+                    reverseStr(str, wordStart, -1);
+                    wordStart = -1;
+                }
+            } else {
+                //读到单词了
+                if (wordStart == -1) {
+                    wordStart = i;
+                }
+            }
+        }
+        reverseStr(str, 0, str.length - 1);
+    }
+
+
+    private static void reverseStr(char[] str, int from, int to) {
+        while (from < to) {
+            char t = str[from];
+            str[from++] = str[to];
+            str[to--] = t;
+        }
+    }
 }
