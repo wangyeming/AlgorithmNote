@@ -5,6 +5,7 @@ import java.util.List;
 
 //找到数组中重复的数字
 //长度为n的数组里所有数字都在0-n-1的范围内，某些数字是重复的，找到任意一个重复的数字
+//考察点：一维数组的理解和编程能力
 public class JAVA_3_1 {
 
     public static void main(String[] argv) {
