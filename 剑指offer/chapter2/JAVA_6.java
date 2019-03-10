@@ -1,19 +1,16 @@
 package chapter2;
 
+import support.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 从尾到头打印链表
+ * <p>
+ * 考察点：链表的操作，栈的利用
+ */
 public class JAVA_6 {
-
-    static class ListNode {
-
-        public ListNode(int value) {
-            this.value = value;
-        }
-
-        int value;
-        ListNode nextNode = null;
-    }
 
     public static void main(String[] argv) {
         ListNode node1 = new ListNode(1);
@@ -45,9 +42,9 @@ public class JAVA_6 {
         }
     }
 
-    //递归写法
+    //递归写法，容易栈溢出
     public static void reversePrintLinkedList2(ListNode firstNode) {
-        if(firstNode == null) {
+        if (firstNode == null) {
             return;
         }
         reversePrintLinkedList2(firstNode.nextNode);

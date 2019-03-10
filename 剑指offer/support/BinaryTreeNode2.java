@@ -1,5 +1,6 @@
-package chapter2;
+package support;
 
+//二叉树的节点(有父节点)
 public class BinaryTreeNode2 {
 
     public int value;

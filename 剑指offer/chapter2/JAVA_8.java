@@ -1,12 +1,20 @@
 package chapter2;
 
-//给定一颗二叉树和其中一个节点，找出中序遍历序列的下一个节点。
+import support.BinaryTreeNode2;
+
+/**
+ * 二叉树的下一个节点
+ * <p>
+ * 给定一颗二叉树(节点包含父节点信息)和其中一个节点，找出中序遍历序列的下一个节点。
+ * <p>
+ * 考察点：二叉树的中序遍历深刻理解
+ */
 public class JAVA_8 {
 
     //              1
     //      2               3
     //  4        5      6       7
-    //          8  9
+    //         8   9
     public static void main(String[] argv) {
 //        int[] inOrder = new int[]{4, 2, 8, 5, 9, 1, 6, 3, 7};
 
@@ -59,6 +67,12 @@ public class JAVA_8 {
     }
 
 
+    //解题思路：找规律，分情况考虑
+    //1. 如果该节点有右子树，那么下一个节点就是右子树的最左节点
+    //2. 如果该结点没有右子树，
+    //      2.1 且该结点的父节点是空，那么他(是根节点)，没有下一个节点
+    //      2.2 该结点是父节点的左子节点, 那么下一个节点就是他的父节点
+    //      2.3 该结点是父节点的右子节点，那么下一个节点比较复杂(沿着父节点方向找，找到一个节点是它父节点的左子节点的时候，它的父节点就是下一个节点)
     public static BinaryTreeNode2 findNextNodeByInOrder(BinaryTreeNode2 binaryTreeNode) {
         if (binaryTreeNode == null) {
             return null;
