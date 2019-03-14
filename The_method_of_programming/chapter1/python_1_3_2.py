@@ -9,7 +9,9 @@ def get_str_all_combination(str1):
     for i in range(n):
         # 第i次表示，将i展示为二进制，如010，表示，第二个和第四个字母是存在的，其它字母不存在
         result = ''
+        print('i', i, bin(i))
         for index, s in enumerate(str1):
+            print('index', index, bin(index))
             # 比如说index = 0，s = 'A'的时候，i=101，那就表示A是存在的。下次循环index = 1，s = 'B'不存在
             if (i & (1 << index)) != 0:
                 result += s
