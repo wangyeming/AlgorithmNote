@@ -28,7 +28,11 @@ public class JAVA_7 {
         //[4, 7, 2,     1,      5, 3, 8, 6]
         // <----->      ^       <-------->
         //  左子树      root       右子树
-        rebuildBinaryTree(preOrder, 0, inOrder, 0, 8);
+        rebuildBinaryTree(preOrder, inOrder);
+    }
+
+    public static BinaryTreeNode rebuildBinaryTree(int[] preOrder, int[] inOrder) {
+        return rebuildBinaryTree(preOrder, 0, inOrder, 0, preOrder.length);
     }
 
     /**
