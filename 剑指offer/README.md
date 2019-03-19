@@ -83,3 +83,13 @@
 [29 顺时针打印矩阵](./chapter4/JAVA_29.java)
 
 [30 包含min函数的栈](./chapter4/JAVA_30.java)
+
+[31 栈的压入,弹出序列](./chapter4/JAVA_31.java)
+
+[32_1 从上到下打印二叉树](./chapter4/JAVA_32_1.java)
+
+[32_2 分行从上到下打印二叉树](./chapter4/JAVA_32_2.java)
+
+[32_3 之字形打印二叉树](./chapter4/JAVA_32_3.java)
+
+[33 二叉树的后续遍历序列](./chapter4/JAVA_31.java)
