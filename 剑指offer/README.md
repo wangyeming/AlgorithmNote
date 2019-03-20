@@ -92,4 +92,10 @@
 
 [32_3 之字形打印二叉树](./chapter4/JAVA_32_3.java)
 
-[33 二叉树的后续遍历序列](./chapter4/JAVA_31.java)
+[33 二叉树的后续遍历序列](./chapter4/JAVA_33.java)
+
+[34 二叉树中和为某一值的路径](./chapter4/JAVA_34.java)
+
+[35 复杂链表的复制](./chapter4/JAVA_35.java)
+
+[36 二叉搜索树与双向链表](./chapter4/JAVA_36.java)
