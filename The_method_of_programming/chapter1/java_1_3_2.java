@@ -21,7 +21,7 @@ public class java_1_3_2 {
         for (int i = 0; i < n; i++) {
             StringBuilder result = new StringBuilder();
             for (int j = 0; j < len; j++) {
-                System.out.println("i " + i + " j " + j);
+                System.out.println("i " + i + " j " + j + " 1<< j " + (1 << j));
                 if ((i & (1 << j)) != 0) {
                     result.append(str.charAt(j));
                 }

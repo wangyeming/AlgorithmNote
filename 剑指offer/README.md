@@ -99,3 +99,13 @@
 [35 复杂链表的复制](./chapter4/JAVA_35.java)
 
 [36 二叉搜索树与双向链表](./chapter4/JAVA_36.java)
+
+[37 序列化二叉树](./chapter4/JAVA_36.java)
+
+[38_1 字符串的排列](./chapter4/JAVA_36.java)
+
+[38_2 求字符的全组合](./chapter4/JAVA_36.java)
+
+[38_3 正方体顶角数字和相等](./chapter4/JAVA_36.java)
+
+[38_4 八皇后问题](./chapter4/JAVA_36.java)
