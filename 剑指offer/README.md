@@ -109,3 +109,15 @@
 [38_3 正方体顶角数字和相等](./chapter4/JAVA_36.java)
 
 [38_4 八皇后问题](./chapter4/JAVA_36.java)
+
+* [Chapter5](./chapter5)
+
+[39 数组中出现次数超过一半的数字](./chapter5/JAVA_39.java)
+
+[40 最小的K个数](./chapter5/JAVA_40.java)
+
+[42 连续子数组最大的和](./chapter5/JAVA_42.java)
+
+[43 1~n整数中1出现的次数](./chapter5/JAVA_43.java)
+
+[44 数字序列中某一位的数字](./chapter5/JAVA_44.java)
