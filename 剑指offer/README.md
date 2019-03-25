@@ -121,3 +121,27 @@
 [43 1~n整数中1出现的次数](./chapter5/JAVA_43.java)
 
 [44 数字序列中某一位的数字](./chapter5/JAVA_44.java)
+
+[45 把数组排成最小的数](./chapter5/JAVA_45.java)
+
+[46 把数字翻译成字符串](./chapter5/JAVA_46.java)
+
+[47 礼物的最大价值](./chapter5/JAVA_47.java)
+
+[48 最长不包含重复字符的子字符串](./chapter5/JAVA_48.java)
+
+[49 丑数](./chapter5/JAVA_49.java)
+
+[50_1 丑数](./chapter5/JAVA_50_1.java)
+
+[50_2 删除另一个字符串中出现的字符](./chapter5/JAVA_50_2.java)
+
+[50_3 删除字符串中所有重复出现的字符](./chapter5/JAVA_50_3.java)
+
+[50_4 变位词检测](./chapter5/JAVA_50_4.java)
+
+[50_5 字符流中第一个只出现一次的字符](./chapter5/JAVA_50_5.java)
+
+[51 数组中的逆序对](./chapter5/JAVA_51.java)
+
+[52 两个链表的第一个公共节点](./chapter5/JAVA_52.java)
