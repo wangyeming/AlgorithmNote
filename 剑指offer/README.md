@@ -145,3 +145,21 @@
 [51 数组中的逆序对](./chapter5/JAVA_51.java)
 
 [52 两个链表的第一个公共节点](./chapter5/JAVA_52.java)
+
+* [Chapter6](./chapter6)
+
+[53_1 在排序数组中查找数字](./chapter6/JAVA_53_1.java)
+
+[53_2 0~n-1中缺失的数字](./chapter6/JAVA_53_2.java)
+
+[53_3 数组中数值和下标相等的元素](./chapter6/JAVA_53_3.java)
+
+[54 二叉搜索树的第k大节点](./chapter6/JAVA_54.java)
+
+[55_1 二叉树的深度](./chapter6/JAVA_55_1.java)
+
+[55_2 平衡二叉树](./chapter6/JAVA_55_2.java)
+
+[56_1 数组中数字出现的次数](./chapter6/JAVA_56_1.java)
+
+[57_2 数组中唯一只出现一次的数字](./chapter6/JAVA_56_2.java)
