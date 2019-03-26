@@ -162,4 +162,18 @@
 
 [56_1 数组中数字出现的次数](./chapter6/JAVA_56_1.java)
 
-[57_2 数组中唯一只出现一次的数字](./chapter6/JAVA_56_2.java)
+[56_2 数组中唯一只出现一次的数字](./chapter6/JAVA_56_2.java)
+
+[57_1 和为s的两个数字](./chapter6/JAVA_57_1.java)
+
+[57_2 和为s的连续正数序列](./chapter6/JAVA_57_2.java)
+
+[58_1 翻转字符串](./chapter6/JAVA_58_1.java)
+
+[58_2 左旋字符串](./chapter6/JAVA_58_2.java)
+
+[59_1 滑动窗口的最大值](./chapter6/JAVA_59_1.java)
+
+[59_2 队列的最大值](./chapter6/JAVA_59_2.java)
+
+[60 n个骰子的点数](./chapter6/JAVA_60.java)
