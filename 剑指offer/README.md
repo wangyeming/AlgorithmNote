@@ -177,3 +177,5 @@
 [59_2 队列的最大值](./chapter6/JAVA_59_2.java)
 
 [60 n个骰子的点数](./chapter6/JAVA_60.java)
+
+[61 扑克牌中的顺子](./chapter6/JAVA_61.java)
