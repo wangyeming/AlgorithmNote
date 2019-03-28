@@ -179,3 +179,15 @@
 [60 n个骰子的点数](./chapter6/JAVA_60.java)
 
 [61 扑克牌中的顺子](./chapter6/JAVA_61.java)
+
+[62 圆圈中最后剩下的数字(约瑟夫环)](./chapter6/JAVA_62.java)
+
+[63_1 股票的最大利润](./chapter6/JAVA_63_1.java)
+
+[63_2 买卖股票的最佳时机 Ⅱ](./chapter6/JAVA_63_2.java)
+
+[65_1 不用加减乘除做加法](./chapter6/JAVA_65_1.java)
+
+[65_2 交换两个变量](./chapter6/JAVA_65_2.java)
+
+[66 构建乘积数组](./chapter6/JAVA_66.java)
