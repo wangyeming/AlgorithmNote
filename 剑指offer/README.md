@@ -191,3 +191,13 @@
 [65_2 交换两个变量](./chapter6/JAVA_65_2.java)
 
 [66 构建乘积数组](./chapter6/JAVA_66.java)
+
+[67 把字符串转换成整数](./chapter6/JAVA_67.java)
+
+[68_1 二叉搜索树的最低公共祖先](./chapter6/JAVA_68_1.java)
+
+[68_2 包含父节点指针的二叉树的最低公共祖先](./chapter6/JAVA_68_2.java)
+
+[68_3 二叉树的最近公共祖先](./chapter6/JAVA_68_3.java)
+
+[68_4 普通树的最近公共祖先](./chapter6/JAVA_68_4.java)
