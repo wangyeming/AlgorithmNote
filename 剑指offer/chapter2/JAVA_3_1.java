@@ -1,5 +1,8 @@
 package chapter2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 数组中重复的数字
  * <p>
@@ -25,6 +28,36 @@ public class JAVA_3_1 {
             }
         }
         return -1;
+    }
+
+    //不借助额外的储存空间，找出所有的重复元素
+    public static List<Integer> findDuplicates(int[] nums) {
+        List<Integer> result = new ArrayList<>();
+        if(nums == null || nums.length == 0) {
+            return result;
+        }
+        for(int num: nums) {
+            if(num < 1 || num > nums.length) {
+                return result;
+            }
+        }
+        for(int i = 0; i< nums.length; i++) {
+            while(i != nums[i] - 1) {
+                if(nums[i] == -1) {
+                    break;
+                }
+                if(nums[nums[i] - 1] == nums[i]) {
+                    result.add(nums[i]);
+                    //这里，将重复元素置为-1，可以避免最终结果的重复
+                    //注意，这里不可以将nums[i]置为-1，因为后续可能存在某元素恰好值为nums[i]
+                    //index=nums[i] - 1的元素就在它自己的位置上，不会影响到其它元素
+                    nums[nums[i] - 1] = -1;
+                    break;
+                }
+                swap(nums, i, nums[i]-1);
+            }
+        }
+        return result;
     }
 
     private static void swap(int[] array, int a, int b) {

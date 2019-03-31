@@ -6,15 +6,15 @@ import java.util.Random;
 public class Partition {
 
     public static void main(String[] argv) {
-//        int[] nums1 = {9, 8, 10, 4, 7, 2, 5};
-//        System.out.println(Arrays.toString(nums1));
-//        System.out.println("pivot is " + partition1(nums1, 0, 6));
-//        System.out.println(Arrays.toString(nums1));
-//        System.out.println();
-        int[] nums2 = {9, 8, 10, 4, 7, 2, 5};
-        System.out.println(Arrays.toString(nums2));
-        System.out.println("pivot is " + partition2(nums2, 0, 6));
-        System.out.println(Arrays.toString(nums2));
+        int[] nums1 = {9, 8, 10, 4, 7, 2, 5};
+        System.out.println(Arrays.toString(nums1));
+        System.out.println("pivot is " + partition1(nums1, 0, nums1.length - 1));
+        System.out.println(Arrays.toString(nums1));
+        System.out.println();
+//        int[] nums2 = {9, 8, 10, 4, 7, 2, 5};
+//        System.out.println(Arrays.toString(nums2));
+//        System.out.println("pivot is " + partition2(nums2, 0, nums2.length-1));
+//        System.out.println(Arrays.toString(nums2));
 //        System.out.println();
 //        int[] nums3 = {9, 8, 10, 4, 7, 2, 5};
 //        System.out.println(Arrays.toString(nums3));
@@ -30,8 +30,8 @@ public class Partition {
         if (start >= end) {
             return;
         }
-//        int index = partition1(nums, start, end);
-        int index = partition2(nums, start, end);
+        int index = partition1(nums, start, end);
+//        int index = partition2(nums, start, end);
 //        int index = partition3(nums, start, end);
 
         System.out.println(Arrays.toString(nums));
@@ -64,6 +64,7 @@ public class Partition {
                 }
             }
         }
+        //previous一开始是-1，所以最后要+1.如果pivot是开头元素，那么就不需要
         previous++;
         swap(nums, previous, end);
         return previous;
@@ -83,7 +84,7 @@ public class Partition {
         while (left < right) {
             while (left < right && nums[left] <= pivot) left++;
             while (left < right && nums[right] >= pivot) right -= 1;
-            if(left < right) {
+            if (left < right) {
                 swap(nums, left, right);
             }
         }

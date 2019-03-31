@@ -3,7 +3,7 @@ package chapter3;
 import support.ListNode;
 
 /**
- * 链表中环的入口节点
+ * s
  * <p>
  * 如果一个链表中包含环，如何照出环的入口节点
  *
@@ -39,53 +39,47 @@ public class JAVA_23 {
         if(head == null) {
             return null;
         }
-        ListNode slow = head;
-        ListNode fast = head;
-        boolean hasCircle = false;
-        while (true) {
-            fast = fast.nextNode;
-            if (fast == null) {
-                break;
-            }
-            if (fast == slow) {
-                hasCircle = true;
-                break;
-            }
-            fast = fast.nextNode;
-            if (fast == null) {
-                break;
-            }
-            if (fast == slow) {
-                hasCircle = true;
-                break;
-            }
-            slow = slow.nextNode;
-        }
-        System.out.println(hasCircle ? "有环" : "无环");
-        if (!hasCircle) {
-            //无环
+        ListNode meetingNode = meetingNode(head);
+        if(meetingNode == null) {
             return null;
         }
-        System.out.println("相遇点是 " + fast);
-        //计算环的长度
-        ListNode node = fast;
-        node = node.nextNode;
-        int i = 1;
-        while (node != fast) {
-            node = node.nextNode;
-            i++;
-        }
-        System.out.println("环的长度 " + i);
-        fast = head;
-        slow = head;
-        for (int j = 0; j < i; j++) {
+        int loopLength = geLoopLength(meetingNode);
+        ListNode slow = head, fast = head;
+        for(int i= 0;i < loopLength;i++) {
             fast = fast.nextNode;
         }
-        while (slow != fast) {
+        while(fast != slow) {
             slow = slow.nextNode;
             fast = fast.nextNode;
         }
         return slow;
+    }
 
+    private static ListNode meetingNode(ListNode head) {
+        if(head == null) {
+            return null;
+        }
+        ListNode slow = head;
+        ListNode fast = slow.nextNode;
+        while(fast != null && slow != null) {
+            if(fast == slow) {
+                return fast;
+            }
+            slow = slow.nextNode;
+            fast = fast.nextNode;
+            if(fast != null) {
+                fast = fast.nextNode;
+            }
+        }
+        return null;
+    }
+
+    private static int geLoopLength(ListNode nodeInLoop) {
+        ListNode loopNode = nodeInLoop.nextNode;
+        int loopLength = 1;
+        for(;loopNode != nodeInLoop;loopLength++) {
+            loopNode = loopNode.nextNode;
+        }
+        return loopLength;
     }
 }
