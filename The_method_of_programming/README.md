@@ -32,4 +32,4 @@
 
 1.4 字符串转换成整数
 
-同[剑指offer67题]((../剑指offer/chapter6/JAVA_67.java))
+同[剑指offer67题](../剑指offer/chapter6/JAVA_67.java)
