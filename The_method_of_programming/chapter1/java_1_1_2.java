@@ -10,49 +10,41 @@ public class java_1_1_2 {
     public static void main(String[] argv) {
         String str = "I am a student.";
         char[] chars = str.toCharArray();
-        reverseWords(chars);
+        reverse(chars);
         System.out.println(chars);
     }
 
-    public static void reverseWords(char[] str) {
-        if (str.length == 0) {
+    //和剑指offer58-1题一样
+    public static void reverse(char[] chars) {
+        if (chars == null || chars.length == 0) {
             return;
         }
-        int wordStart = -1;
-        for (int i = 0; i < str.length; i++) {
-            if (i == str.length - 1) {
-                //读到句末了
-                if (wordStart != -1) {
-                    reverseStr(str, wordStart, str.length - 1);
-                    break;
-                }
-            }
-            char s = str[i];
-            if (s == ' ') {
-                //读到空格了
-                if (wordStart == -1) {
-                    //连续空格，忽略
-                } else {
-                    //单词结束
-                    reverseStr(str, wordStart, -1);
-                    wordStart = -1;
+        //读到空格时，reverse单词，并且start = end
+        for (int start = 0, end = 0; end < chars.length; start++, end++) {
+            if (chars[end] == ' ' || end == chars.length - 1) {
+                if (start != end) {
+                    reverse(chars, start, end - 1);
+                    start = end;
                 }
             } else {
-                //读到单词了
-                if (wordStart == -1) {
-                    wordStart = i;
-                }
+                //读到普通单词
+                start--;
             }
         }
-        reverseStr(str, 0, str.length - 1);
+        reverse(chars, 0, chars.length - 1);
     }
 
 
-    private static void reverseStr(char[] str, int from, int to) {
-        while (from < to) {
-            char t = str[from];
-            str[from++] = str[to];
-            str[to--] = t;
+    private static void reverse(char[] chars, int start, int end) {
+        if (chars == null || chars.length == 0) {
+            return;
+        }
+        while (start < end) {
+            char tmp = chars[start];
+            chars[start] = chars[end];
+            chars[end] = tmp;
+            start++;
+            end--;
         }
     }
 }

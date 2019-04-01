@@ -2,15 +2,22 @@ package chapter1;
 
 import java.util.HashMap;
 
-public class java_1_2 {
+/**
+ * 变位词(兄弟字符串)
+ * <p>
+ * 如果两个字符串的字符一样，出现的次数也一样，只是出现的顺序不一样，则认为这两个字符串是兄弟字符串。
+ * 现提供一个字符串，如何在字典中迅速找到他的兄弟字符串。
+ */
+public class java_1_2_2 {
 
     public static void main(String[] argv) {
         String str1 = "ABCA";
         String str2 = "BAAC";
-        System.out.println(isBortherStr(str1, str2));
+        System.out.println(isBrotherStr(str1, str2));
     }
 
-    public static boolean isBortherStr(String str1, String str2) {
+    //这里我只写了如何判断两个字符串是否是兄弟字符串
+    public static boolean isBrotherStr(String str1, String str2) {
         if (str1.length() != str2.length()) {
             return false;
         }
