@@ -1,3 +1,8 @@
+/**
+ * 排序链表
+ *
+ * 在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
+ */
 public class JAVA_148 {
 
     public static void main(String[] argv) {
