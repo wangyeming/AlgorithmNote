@@ -6,7 +6,7 @@ package chapter1;
 public class java_1_6_1 {
 
     public static void main(String[] argv) {
-        String str = "abababbababa";
+        String str = "abba";
         System.out.println(longestPalindrome(str));
     }
 
@@ -16,6 +16,7 @@ public class java_1_6_1 {
         if (str == null || str.length() == 0) {
             return 0;
         }
+        int center = 0;
         int max = 1, currentLength = 0;
         for (int i = 0; i < str.length(); i++) {
             //回文长度为奇数
@@ -27,6 +28,7 @@ public class java_1_6_1 {
             }
             if (currentLength > max) {
                 max = currentLength;
+                center = i;
             }
             //回文长度为偶数
             for (int j = 0; (i - j) >= 0 && (i + j + 1) < str.length(); j++) {
@@ -37,8 +39,17 @@ public class java_1_6_1 {
             }
             if (currentLength > max) {
                 max = currentLength;
+                center = i;
             }
         }
+        System.out.println("center " + center + " max " + max);
+        int startPos = center - ((max - 1) >> 1);
+        int endPos = startPos + max - 1;
+        StringBuilder sb = new StringBuilder();
+        for (int i = startPos; i <= endPos; i++) {
+            sb.append(str.charAt(i));
+        }
+        System.out.println(sb.toString());
         return max;
     }
 
