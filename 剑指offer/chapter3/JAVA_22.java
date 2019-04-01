@@ -1,6 +1,6 @@
 package chapter3;
 
-import support.ListNode;
+import base.ListNode;
 
 /**
  * 链表中倒数第k个节点

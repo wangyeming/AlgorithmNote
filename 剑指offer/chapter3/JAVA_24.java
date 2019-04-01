@@ -1,6 +1,6 @@
 package chapter3;
 
-import support.ListNode;
+import base.ListNode;
 
 /**
  * 反转链表

@@ -1,6 +1,6 @@
 package chapter5;
 
-import support.ListNode;
+import base.ListNode;
 
 /**
  * 两个链表的第一个公共节点

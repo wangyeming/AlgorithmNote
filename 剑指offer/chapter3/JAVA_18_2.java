@@ -1,6 +1,6 @@
 package chapter3;
 
-import support.ListNode;
+import base.ListNode;
 
 /**
  * 删除链表中重复的节点

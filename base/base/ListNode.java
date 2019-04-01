@@ -1,4 +1,4 @@
-package support;
+package base;
 
 //链表的节点
 public class ListNode {
@@ -8,7 +8,7 @@ public class ListNode {
     }
 
     public int value;
-    public base.ListNode nextNode = null;
+    public ListNode nextNode = null;
 
     @Override
     public String toString() {

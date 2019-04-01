@@ -1,6 +1,6 @@
 package chapter2;
 
-import support.ListNode;
+import base.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;

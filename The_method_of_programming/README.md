@@ -33,3 +33,13 @@
 1.4 字符串转换成整数
 
 同[剑指offer67题](../剑指offer/chapter6/JAVA_67.java)
+
+1.5 回文字符串
+
+* [回文判断](./chapter1/java_1_5_1.java)
+
+* [判断单向链表是不是回文串](./chapter1/java_1_5_2.java)
+
+1.6 回文字符串
+
+* [最长回文子串](./chapter1/java_1_6_1.java)

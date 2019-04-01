@@ -1,6 +1,6 @@
 package chapter3;
 
-import support.ListNode;
+import base.ListNode;
 
 /**
  * 合并两个排序链表
