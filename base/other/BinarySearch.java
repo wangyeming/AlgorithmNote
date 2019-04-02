@@ -1,3 +1,5 @@
+package other;
+
 /**
  * 二分查找
  */
