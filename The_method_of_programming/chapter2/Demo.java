@@ -1,14 +1,10 @@
 package chapter2;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Demo {
 
     public static void main(String[] argv) {
-
-
         int[] data = new int[8];
         data[0] = 1;
         data[1] = 2;

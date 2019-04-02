@@ -43,3 +43,17 @@
 1.6 回文字符串
 
 * [最长回文子串](./chapter1/java_1_6_1.java)
+
+* [Chapter2](./chapter2)
+
+* [寻找最小的k个数](./chapter2/java_2_1_1.java)
+
+* [三元组的数量](./chapter2/java_2_1_2.java)
+
+* [寻找和为定值的两个数](./chapter2/java_2_2_1.java)
+
+* [寻找和为定值的两个数的下标](./chapter2/java_2_2_2.java)
+
+* [寻找三个数和为0](./chapter2/java_2_2_3.java)
+
+* [寻找和为定值的多个数](./chapter2/java_2_3_1.java)
