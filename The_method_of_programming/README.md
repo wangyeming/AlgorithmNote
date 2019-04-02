@@ -33,7 +33,7 @@
 
 1.4 字符串转换成整数
 
-同[剑指offer67题](../剑指offer/chapter6/JAVA_67.java)
+* [字符串转换成整数(同剑指offer67题)](../剑指offer/chapter6/JAVA_67.java)
 
 1.5 回文字符串
 
@@ -53,7 +53,7 @@
 
 * [寻找和为定值的两个数](./chapter2/java_2_2_1.java)
 
-* [寻找树中和为定值的所有路径](../剑指offer/chapter4/JAVA_34.java)
+* [寻找树中和为定值的所有路径(同剑指offer34题)](../剑指offer/chapter4/JAVA_34.java)
 
 * [寻找和为定值的两个数的下标](./chapter2/java_2_2_3.java)
 
