@@ -6,27 +6,24 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * 寻找和为定值的两个数的下标
+ * 寻找和为定值的两个数
  * <p>
  * 输入一个整数数组和一个整数，在数组中查找一对数，满足他们的和正好是输入的那个整数。
- * 不可以重复利用数组中同样的元素，返回所有符合条件的元素的下标
+ * 不可以重复利用数组中同样的元素
  */
 public class JAVA_2_2_2 {
 
-    //寻找下标的难点在于，如果数组中存在重复的元素，寻找index的过程会相对比较棘手
+    //三数之和为0的话，a+b+c=0 => a+b=-c
     public static void main(String[] argv) {
-        int[] nums = {1, 1, 1, 1, 2, 2};
-        List<Integer[]> results = twoSum2(nums, 3);
-        for (Integer[] result : results) {
-            System.out.println(Arrays.toString(result));
-
-        }
+        int[] nums = {7, 9, 10, 5, 13, 1, 2, 15, 3, 4, 6, 11, 12, 8, 14};
+        System.out.println(Arrays.toString(twoSum1(nums, 26)));
+        System.out.println(Arrays.toString(twoSum2(nums, 26)));
     }
 
     //用时间换空间的做法，空间复杂度O(n),时间复杂度O(n)
     //寻找两个数的下标显然可以通过key对于的value来获取
-    public static List<Integer[]> twoSum1(int[] array, int sum) {
-        List<Integer[]> result = new ArrayList<>();
+    public static int[] twoSum1(int[] array, int sum) {
+        int[] result = new int[2];
         if (array == null || array.length < 2) {
             return result;
         }
@@ -47,8 +44,11 @@ public class JAVA_2_2_2 {
             if (map.containsKey(findNum)) {
                 List<Integer> indexs = map.get(findNum);
                 for (Integer index : indexs) {
-                    if (array[i] < array[index]) {       //避免复用同一个元素以及重复
-                        result.add(new Integer[]{i, index});
+                    if (index != i) {
+                        //避免复用同一个元素
+                        result[0] = num;
+                        result[1] = findNum;
+                        break;
                     }
                 }
 
@@ -58,30 +58,24 @@ public class JAVA_2_2_2 {
     }
 
     //排序后的左右指针，排序时间复杂度O(nlogn)，查找时间复杂度O(n)
-    public static List<Integer[]> twoSum2(int[] array, int sum) {
-        List<Integer[]> result = new ArrayList<>();
+    //寻找两个数的下标显然也很简单,这里因为只需要找到一个结果，所以不需要去重
+    public static int[] twoSum2(int[] array, int sum) {
+        int[] result = new int[2];
         if (array == null || array.length < 2) {
             return result;
         }
         Arrays.sort(array);
-        int left = 0, right = array.length - 1;
-        while (left < right) {
-            int realSum = array[left] + array[right];
+        int start = 0, end = array.length - 1;
+        while (start < end) {
+            int realSum = array[start] + array[end];
             if (realSum < sum) {
-                left++;
+                start++;
             } else if (realSum > sum) {
-                right--;
+                end--;
             } else {
-                result.add(new Integer[]{left, right});
-                //left和right的移动需要注意
-                for (int tmpRight = right - 1; left < tmpRight && array[tmpRight] == array[right]; tmpRight--) {
-                    result.add(new Integer[]{left, tmpRight});
-                }
-                for (int tmpLeft = left + 1; tmpLeft < right && array[tmpLeft] == array[left]; tmpLeft++) {
-                    result.add(new Integer[]{tmpLeft, right});
-                }
-                left++;
-                right--;
+                result[0] = array[start];
+                result[1] = array[end];
+                break;
             }
         }
         return result;

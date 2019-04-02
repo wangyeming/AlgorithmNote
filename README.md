@@ -2,7 +2,7 @@
 
 ## 书单
 
-* [The_method_of_programming 编程之法 面试和算法心得 人民邮电出版社 July著](./The_method_of_programming/README.md)
+* [编程之法 面试和算法心得(The_method_of_programming ) 人民邮电出版社 July著](./The_method_of_programming/README.md)
 
 * [剑指offer 名企面试官精讲典型面试题 电子工业出版社 何海涛著](./剑指offer/README.md) 进度：68/68
 

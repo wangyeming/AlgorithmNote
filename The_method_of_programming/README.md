@@ -1,8 +1,9 @@
-# The_method_of_programming 编程之法 面试和算法心得
+# 编程之法 面试和算法心得(The_method_of_programming)
 
 ## 整体感悟
 
 这是一本讲算法的好书，从易到难，同一问题不同的解法，知识面覆盖度也很大。
+题目很多，课后还有很多习题，慢慢来。
 
 ## 题目目录
 
@@ -52,8 +53,10 @@
 
 * [寻找和为定值的两个数](./chapter2/java_2_2_1.java)
 
-* [寻找和为定值的两个数的下标](./chapter2/java_2_2_2.java)
+* [寻找树中和为定值的所有路径](../剑指offer/chapter4/JAVA_34.java)
 
-* [寻找三个数和为0](./chapter2/java_2_2_3.java)
+* [寻找和为定值的两个数的下标](./chapter2/java_2_2_3.java)
+
+* [寻找三个数和为0](./chapter2/java_2_2_4.java)
 
 * [寻找和为定值的多个数](./chapter2/java_2_3_1.java)
