@@ -7,7 +7,7 @@
 
 ## 题目目录
 
-* [Chapter1](./chapter1)
+### [Chapter1](./chapter1)
 
 1.1 字符串的旋转
 
@@ -45,7 +45,7 @@
 
 * [最长回文子串](./chapter1/java_1_6_1.java)
 
-* [Chapter2](./chapter2)
+### [Chapter2](./chapter2)
 
 * [寻找最小的k个数](./chapter2/java_2_1_1.java)
 
