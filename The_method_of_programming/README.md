@@ -47,9 +47,13 @@
 
 ### [Chapter2](./chapter2)
 
+2.1 寻找最小的k个数
+
 * [寻找最小的k个数](./chapter2/java_2_1_1.java)
 
 * [三元组的数量](./chapter2/java_2_1_2.java)
+
+2.2 寻找和为定值的两个数
 
 * [寻找和为定值的两个数](./chapter2/java_2_2_1.java)
 
@@ -58,5 +62,7 @@
 * [寻找和为定值的两个数的下标](./chapter2/java_2_2_3.java)
 
 * [寻找三个数和为0](./chapter2/java_2_2_4.java)
+
+2.3 寻找和为定值的多个数
 
 * [寻找和为定值的多个数](./chapter2/java_2_3_1.java)
