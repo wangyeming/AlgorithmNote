@@ -1,8 +1,8 @@
 package chapter4;
 
-import support.BinaryTreeNode;
+import base.BinaryTreeNode;
 
-import static support.LevelOrder.levelOrder1;
+import static binaryTree.LevelOrder.levelOrder1;
 
 /**
  * 序列化二叉树

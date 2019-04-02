@@ -1,6 +1,6 @@
 package chapter2;
 
-import support.BinaryTreeNode;
+import base.BinaryTreeNode;
 
 /**
  * 重建二叉树

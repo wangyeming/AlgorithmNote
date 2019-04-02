@@ -1,7 +1,7 @@
 package chapter4;
 
-import support.BinaryTreeNode;
-import support.LevelOrder;
+import base.BinaryTreeNode;
+import binaryTree.LevelOrder;
 
 /**
  * 二叉树的镜像

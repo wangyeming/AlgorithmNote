@@ -1,6 +1,6 @@
 package chapter2;
 
-import support.BinaryTreeNode2;
+import base.BinaryTreeNode2;
 
 /**
  * 二叉树的下一个节点

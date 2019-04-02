@@ -1,6 +1,6 @@
 package chapter6;
 
-import support.BinaryTreeNode;
+import base.BinaryTreeNode;
 
 /**
  * 二叉树的深度

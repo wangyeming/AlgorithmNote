@@ -1,7 +1,7 @@
 package chapter3;
 
 import chapter2.JAVA_7;
-import support.BinaryTreeNode;
+import base.BinaryTreeNode;
 
 /**
  * 树的子结构

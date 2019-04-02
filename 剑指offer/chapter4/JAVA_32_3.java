@@ -1,6 +1,6 @@
 package chapter4;
 
-import support.BinaryTreeNode;
+import base.BinaryTreeNode;
 
 import java.util.Stack;
 

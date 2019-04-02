@@ -1,9 +1,10 @@
-package support;
+package sort.java;
 
 import java.util.Arrays;
 import java.util.Random;
 
-public class Partition {
+//快速排序
+public class QuickSort {
 
     public static void main(String[] argv) {
         int[] nums1 = {9, 8, 10, 4, 7, 2, 5};

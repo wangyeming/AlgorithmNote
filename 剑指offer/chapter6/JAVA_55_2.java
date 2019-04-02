@@ -1,6 +1,6 @@
 package chapter6;
 
-import support.BinaryTreeNode;
+import base.BinaryTreeNode;
 
 /**
  * 平衡二叉树

@@ -1,6 +1,6 @@
 package chapter4;
 
-import support.BinaryTreeNode;
+import base.BinaryTreeNode;
 
 /**
  * 对称二叉树的判断

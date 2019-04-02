@@ -1,6 +1,6 @@
 package chapter4;
 
-import support.BinaryTreeNode;
+import base.BinaryTreeNode;
 
 /**
  * 二叉搜索树与双向链表

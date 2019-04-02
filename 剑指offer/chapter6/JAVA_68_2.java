@@ -1,6 +1,6 @@
 package chapter6;
 
-import support.BinaryTreeNode2;
+import base.BinaryTreeNode2;
 
 /**
  * 包含父节点指针的二叉树的最低公共祖先

@@ -1,4 +1,4 @@
-package support;
+package base;
 
 //二叉树的节点(有父节点)
 public class BinaryTreeNode2 {

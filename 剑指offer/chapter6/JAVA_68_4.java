@@ -1,6 +1,6 @@
 package chapter6;
 
-import support.MultiTreeNode;
+import base.MultiTreeNode;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -1,6 +1,6 @@
 package chapter4;
 
-import support.ComplexListNode;
+import base.ComplexListNode;
 
 /**
  * 复杂链表的复制

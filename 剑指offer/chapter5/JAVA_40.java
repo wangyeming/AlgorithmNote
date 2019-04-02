@@ -1,6 +1,6 @@
 package chapter5;
 
-import support.Partition;
+import sort.java.QuickSort;
 
 import java.util.Arrays;
 
@@ -38,14 +38,14 @@ public class JAVA_40 {
         }
         int start = 0;
         int end = nums.length - 1;
-        int index = Partition.partition1(nums, start, end);
+        int index = QuickSort.partition1(nums, start, end);
         while (index != k - 1) {
             if (index > k - 1) {
                 end = index - 1;
-                index = Partition.partition1(nums, start, end);
+                index = QuickSort.partition1(nums, start, end);
             } else {
                 start = index + 1;
-                index = Partition.partition1(nums, start, end);
+                index = QuickSort.partition1(nums, start, end);
             }
         }
         for (int i = 0; i < k; i++) {

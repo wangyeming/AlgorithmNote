@@ -1,6 +1,6 @@
 package chapter6;
 
-import support.BinaryTreeNode;
+import base.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.Iterator;

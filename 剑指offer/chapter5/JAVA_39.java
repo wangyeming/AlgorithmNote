@@ -1,6 +1,6 @@
 package chapter5;
 
-import support.Partition;
+import sort.java.QuickSort;
 
 /**
  * 数组中出现次数超过一半的数字
@@ -71,14 +71,14 @@ public class JAVA_39 {
         int middle = nums.length >> 1;
         int start = 0;
         int end = nums.length - 1;
-        int index = Partition.partition1(nums, start, end);
+        int index = QuickSort.partition1(nums, start, end);
         while (index != middle) {
             if (index > middle) {
                 end = index - 1;
-                index = Partition.partition1(nums, start, end);
+                index = QuickSort.partition1(nums, start, end);
             } else {
                 start = index + 1;
-                index = Partition.partition1(nums, start, end);
+                index = QuickSort.partition1(nums, start, end);
             }
         }
         int result = nums[middle];

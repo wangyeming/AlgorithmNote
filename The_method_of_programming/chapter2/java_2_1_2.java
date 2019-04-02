@@ -1,6 +1,6 @@
 package chapter2;
 
-import support.Partition;
+import sort.java.QuickSort;
 
 /**
  * 三元组的数量
@@ -47,7 +47,7 @@ public class java_2_1_2 {
     }
 
     public static void quickSelect(int[] nums, int k, int start, int end) {
-        int index = Partition.partition1(nums, start, end);
+        int index = QuickSort.partition1(nums, start, end);
         if (index > start && index > k + start - 1) {
             quickSelect(nums, k, start, index - 1);
         } else if (index < end && index < k + start - 1) {
