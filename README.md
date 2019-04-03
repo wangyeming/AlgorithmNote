@@ -10,9 +10,8 @@
 
 * [LeetCode刷题集](./LeetCode/RADEME.md)
 
-* [排序算法--Java版](./base/sort/java/)
+* [排序算法](./base/sort/README.md)
 
-* [排序算法--Python版](./base/sort/python/)
 
 ## 感悟
 

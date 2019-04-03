@@ -4,7 +4,7 @@ package sort.java;
 public class SelectionSort {
 
     public static void selectSort(int[] array) {
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length-1; i++) {
             //每次从剩余没有排序的元素中，找出最小的，放到指定位置
             int minIndex = i;
             for (int j = i + 1; j < array.length; j++) {

@@ -13,6 +13,9 @@ package sort.java;
 public class ShellSort {
 
     public static void shellSort(int[] array) {
+        if(array == null || array.length <= 1) {
+            return;
+        }
         //这里初始步长选为n/2
         int step = array.length / 2;
         while (step > 0) {

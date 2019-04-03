@@ -5,25 +5,19 @@ package sort.java;
 public class MergeSort {
 
     public static void mergeSort(int[] array) {
-        int[] sortArray = merge(array);
-        for (int i = 0; i < sortArray.length; i++) {
-            array[i] = sortArray[i];
+        if (array == null || array.length <= 1) {
+            return;
         }
+        int[] sortArray = merge(array);
+        System.arraycopy(sortArray, 0, array, 0, sortArray.length);
     }
 
     private static int[] merge(int[] array) {
-        if (array.length < 2) {
-            return array;
-        }
+        if (array.length < 2) return array;
         int mid = array.length / 2;
-        int[] left = new int[mid];
-        int[] right = new int[array.length - mid];
-        for (int i = 0; i < mid; i++) {
-            left[i] = array[i];
-        }
-        for (int i = mid; i < array.length; i++) {
-            right[i - mid] = array[i];
-        }
+        int[] left = new int[mid], right = new int[array.length - mid];
+        System.arraycopy(array, 0, left, 0, mid);
+        System.arraycopy(array, mid, right, 0, array.length - mid);
         return _merge(merge(left), merge(right));
     }
 
@@ -31,20 +25,11 @@ public class MergeSort {
         int[] result = new int[left.length + right.length];
         int i = 0, j = 0;
         while (i < left.length && j < right.length) {
-            if (left[i] > right[j]) {
-                result[i + j] = right[j];
-                j++;
-            } else {
-                result[i + j] = left[i];
-                i++;
-            }
+            if (left[i] > right[j]) result[i + j] = right[j++];
+            else result[i + j] = left[i++];
         }
-        for (; i < left.length; i++) {
-            result[i + j] = left[i];
-        }
-        for (; j < right.length; j++) {
-            result[i + j] = right[j];
-        }
+        if (i < left.length) System.arraycopy(left, i, result, i + j, left.length - i);
+        if (j < right.length) System.arraycopy(right, j, result, i + j, right.length - j);
         return result;
     }
 }

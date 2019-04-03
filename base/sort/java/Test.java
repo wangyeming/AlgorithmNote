@@ -29,10 +29,16 @@ public class Test {
 //        System.out.println(Arrays.toString(array4));
 //        System.out.println("-----test shell sort over------");
 
-        System.out.println("test merge sort");
-        int[] array5 = {10, 3, 4, 62, 13, 4, 78, 9, 7};
-        MergeSort.mergeSort(array5);
-        System.out.println(Arrays.toString(array5));
+//        System.out.println("test merge sort");
+//        int[] array5 = {10, 3, 4, 62, 13, 4, 78, 9, 7};
+//        MergeSort.mergeSort(array5);
+//        System.out.println(Arrays.toString(array5));
+//        System.out.println("-----test merge sort over------");
+
+        System.out.println("test quick sort");
+        int[] array6 = {10, 3, 4, 62, 13, 4, 78, 9, 7};
+        QuickSort.quickSort(array6);
+        System.out.println(Arrays.toString(array6));
         System.out.println("-----test merge sort over------");
     }
 }
