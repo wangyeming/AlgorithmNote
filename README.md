@@ -12,6 +12,8 @@
 
 * [排序算法](./base/sort/README.md)
 
+* [二叉树遍历](./base/binaryTree/README.md)
+
 
 ## 感悟
 
