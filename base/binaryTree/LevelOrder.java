@@ -34,7 +34,6 @@ public class LevelOrder {
         System.out.println(levelOrder1(binaryTreeNode1));
         System.out.println(levelOrder2(binaryTreeNode1));
         System.out.println(levelOrderRecursive(binaryTreeNode1));
-
     }
 
     //递归的方式，通过指定level来指定元素该压入哪个list
