@@ -38,6 +38,36 @@ public class JAVA_25 {
         return mergeHead;
     }
 
+    public static ListNode merge2(ListNode listNode1, ListNode listNode2) {
+        if (listNode1 == null) {
+            return listNode2;
+        } else if (listNode2 == null) {
+            return listNode1;
+        }
+
+        ListNode mergeHead = null;
+        if (listNode1.value <= listNode2.value) {
+            mergeHead = listNode1;
+            listNode1 = listNode1.nextNode;
+        } else {
+            mergeHead = listNode2;
+            listNode2 = listNode2.nextNode;
+        }
+        ListNode node = mergeHead;
+        while (listNode1 != null && listNode2 != null) {
+            if (listNode1.value <= listNode2.value) {
+                node.nextNode = listNode1;
+                listNode1 = listNode1.nextNode;
+            } else {
+                node.nextNode = listNode2;
+                listNode2 = listNode2.nextNode;
+            }
+            node = node.nextNode;
+        }
+        node.nextNode = listNode1 != null ? listNode1 : listNode2;
+        return mergeHead;
+    }
+
     private static void test(int[] nodeValues1, int[] nodeValues2) {
         ListNode lastNode1 = null;
         for (int i = nodeValues1.length - 1; i >= 0; i--) {
@@ -70,7 +100,7 @@ public class JAVA_25 {
         System.out.println("null");
 
 //        ListNode newHead = reverseLinkedList(lastNode);
-        ListNode newHead = merge(lastNode1, lastNode2);
+        ListNode newHead = merge2(lastNode1, lastNode2);
 
         System.out.println("合并链表为");
         while (newHead != null) {

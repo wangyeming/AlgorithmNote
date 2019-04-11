@@ -9,12 +9,11 @@ public class JAVA_29 {
 
     public static void main(String[] argv) {
         int[][] matrix = {
-                {1, 2, 3, 4, 5, 6, 7},
-                {8, 9, 10, 11, 12, 13, 14},
-                {15, 16, 17, 18, 19, 20, 21},
-                {22, 23, 24, 25, 26, 27, 28},
-                {29, 30, 31, 32, 33, 34, 35},
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12}
         };
+
         printMatrixClockwisely(matrix);
     }
 
@@ -22,13 +21,12 @@ public class JAVA_29 {
     //每圈的起点是(0,0),(1,1),(2,2)...，如果5*5的话，2*2是最后一圈的起点，7*7,3*3是最后一圈起点
     //起点(k, k) 总要满足 k*2 < column and k*2 < rows
     public static void printMatrixClockwisely(int[][] matrix) {
-        if (matrix == null) {
-            return;
-        }
-        int columns = matrix[0].length;
-        int rows = matrix.length;
+        if (matrix == null) return;
+        int columns = matrix[0].length, rows = matrix.length;
         //圈数
-        for (int start = 0; start * 2 < columns && start * 2 < rows; start++) printCircle(matrix, start);
+        for (int start = 0; start * 2 < columns && start * 2 < rows; start++) {
+            printCircle(matrix, start);
+        }
     }
 
     //打印一圈，最后一圈可能不完整，可能只有一边，两边，三边
@@ -42,9 +40,13 @@ public class JAVA_29 {
         for (int i = start; i <= endColumn; i++) System.out.print(matrix[start][i] + "\t");
         //从上向下  ↓   (start+1, endColumn) -> (endRow, endColumn)
         for (int i = start + 1; i <= endRow; i++) System.out.print(matrix[i][endColumn] + "\t");
-        //从右向左  ←   (endRow, endColumn-1) -> (endRow, start)
-        for (int i = endColumn - 1; i >= start; i--) System.out.print(matrix[endRow][i] + "\t");
-        //从下向上   ↑  (endRow - 1, start) -> (start + 1, start)
-        for (int i = endRow - 1; i >= start + 1; i--) System.out.print(matrix[i][start] + "\t");
+        if (start < endRow) {
+            //从右向左  ←   (endRow, endColumn-1) -> (endRow, start)
+            for (int i = endColumn - 1; i >= start; i--) System.out.print(matrix[endRow][i] + "\t");
+        }
+        if (start < endColumn) {
+            //从下向上   ↑  (endRow - 1, start) -> (start + 1, start)
+            for (int i = endRow - 1; i >= start + 1; i--) System.out.print(matrix[i][start] + "\t");
+        }
     }
 }
