@@ -34,7 +34,7 @@
 
 [11  旋转数组中的最小数字](./chapter2/JAVA_11.java)
 
-[12  矩阵中的路径](./chapter2/JAVA_12ava)
+[12  矩阵中的路径](./chapter2/JAVA_12.java)
 
 [13  机器人的运动范围](./chapter2/JAVA_13.java)
 
