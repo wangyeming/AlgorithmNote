@@ -65,8 +65,7 @@ public class HeapSort {
     private static void maxHeapify(int index, int lastNodeIndex, int[] arr) {
         int li = (index << 1) + 1;      // 左子节点索引
         if (li > lastNodeIndex) return; // 左子节点索引超出计算范围，直接返回。
-        int ri = li + 1;                // 右子节点索引
-        int cMax = li;                  // 子节点值最大索引，默认左子节点。
+        int ri = li + 1, cMax = li;     // 右子节点索引,子节点值最大索引，默认左子节点。
         // 先判断左右子节点，哪个较大
         if (ri <= lastNodeIndex && arr[ri] > arr[li]) cMax = ri;
         if (arr[cMax] > arr[index]) {
