@@ -39,20 +39,13 @@ public class LevelOrder {
     //递归的方式，通过指定level来指定元素该压入哪个list
     public static List<List<BinaryTreeNode>> levelOrderRecursive(BinaryTreeNode root) {
         List<List<BinaryTreeNode>> result = new ArrayList<>();
-        if (root == null) {
-            return result;
-        }
         _levelOrderRecursive(root, 0, result);
         return result;
     }
 
     private static void _levelOrderRecursive(BinaryTreeNode node, int level, List<List<BinaryTreeNode>> result) {
-        if (node == null) {
-            return;
-        }
-        if (result.size() < level + 1) {
-            result.add(new ArrayList<>());
-        }
+        if (node == null) return;
+        if (result.size() < level + 1) result.add(new ArrayList<>());
         result.get(level).add(node);
         _levelOrderRecursive(node.leftNode, level + 1, result);
         _levelOrderRecursive(node.rightNode, level + 1, result);
@@ -61,9 +54,7 @@ public class LevelOrder {
     //非递归的方式，借助三个数组协助
     public static List<List<BinaryTreeNode>> levelOrder1(BinaryTreeNode root) {
         List<List<BinaryTreeNode>> result = new ArrayList<>();
-        if (root == null) {
-            return result;
-        }
+        if (root == null) return result;
         List<BinaryTreeNode> nodes = new ArrayList<>();
         nodes.add(root);//[1]
         while (!nodes.isEmpty()) {
@@ -71,12 +62,8 @@ public class LevelOrder {
             List<BinaryTreeNode> next = new ArrayList<>();
             for (BinaryTreeNode stackNode : nodes) {
                 current.add(stackNode); //[1]
-                if (stackNode.leftNode != null) {
-                    next.add(stackNode.leftNode);
-                }
-                if (stackNode.rightNode != null) {
-                    next.add(stackNode.rightNode);
-                }
+                if (stackNode.leftNode != null) next.add(stackNode.leftNode);
+                if (stackNode.rightNode != null) next.add(stackNode.rightNode);
 
             }
             nodes = next;
@@ -88,9 +75,7 @@ public class LevelOrder {
     //非递归的方式，借助队列的先进先出
     public static List<List<BinaryTreeNode>> levelOrder2(BinaryTreeNode root) {
         List<List<BinaryTreeNode>> result = new ArrayList<>();
-        if (root == null) {
-            return result;
-        }
+        if (root == null) return result;
         Queue<BinaryTreeNode> q = new ArrayDeque<>();
         q.add(root);
         while (!q.isEmpty()) {
@@ -99,12 +84,8 @@ public class LevelOrder {
             for (int i = 0; i < levelSize; i++) {
                 BinaryTreeNode currentNode = q.poll();
                 currentLevel.add(currentNode);
-                if (currentNode.leftNode != null) {
-                    q.add(currentNode.leftNode);
-                }
-                if (currentNode.rightNode != null) {
-                    q.add(currentNode.rightNode);
-                }
+                if (currentNode.leftNode != null) q.add(currentNode.leftNode);
+                if (currentNode.rightNode != null) q.add(currentNode.rightNode);
             }
             result.add(currentLevel);
 

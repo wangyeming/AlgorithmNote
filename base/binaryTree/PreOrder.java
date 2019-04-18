@@ -28,18 +28,15 @@ public class PreOrder {
     //非递归写法
     public static List<BinaryTreeNode> preOrder2(BinaryTreeNode root) {
         List<BinaryTreeNode> preOrderList = new ArrayList<>();
-        if (root == null) {
-            return preOrderList;
-        }
         BinaryTreeNode node = root;
         Stack<BinaryTreeNode> stack = new Stack<>();
         while (node != null || !stack.isEmpty()) {
-            if (node != null) {
+            if(node == null) {
+                node = stack.pop().rightNode;
+            } else {
                 preOrderList.add(node);
                 stack.push(node);
                 node = node.leftNode;
-            } else {
-                node = stack.pop().rightNode;
             }
         }
         return preOrderList;

@@ -31,13 +31,13 @@ public class InOrder {
         BinaryTreeNode node = root;
         Stack<BinaryTreeNode> stack = new Stack<>();
         while (node != null || !stack.isEmpty()) {
-            if(node != null) {
-                stack.push(node);
-                node = node.leftNode;
-            } else {
+            if(node == null) {
                 BinaryTreeNode stackTopNode = stack.pop();
                 inOrderList.add(stackTopNode);
                 node = stackTopNode.rightNode;
+            } else {
+                stack.push(node);
+                node = node.leftNode;
             }
         }
         return inOrderList;

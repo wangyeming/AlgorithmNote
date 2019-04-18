@@ -29,10 +29,7 @@ public class PostOrder {
         Stack<BinaryTreeNode> stack = new Stack<>();
         BinaryTreeNode lastVisitedNode = null;
         while (node != null || !stack.isEmpty()) {
-            if (node != null) {
-                stack.push(node);
-                node = node.leftNode;
-            } else {
+            if(node == null) {
                 BinaryTreeNode top = stack.peek();
                 if (top.rightNode == null || top.rightNode == lastVisitedNode) {
                     postOrderList.add(top);
@@ -40,6 +37,9 @@ public class PostOrder {
                 } else {
                     node = top.rightNode;
                 }
+            } else {
+                stack.push(node);
+                node = node.leftNode;
             }
         }
         return postOrderList;
@@ -51,12 +51,12 @@ public class PostOrder {
         BinaryTreeNode node = root;
         Stack<BinaryTreeNode> stack = new Stack<>();
         while (node != null || !stack.isEmpty()) {
-            if (node != null) {
+            if (node == null) {
+                node = stack.pop().leftNode;
+            } else {
                 postOrderList.add(node);
                 stack.push(node);
                 node = node.rightNode;
-            } else {
-                node = stack.pop().leftNode;
             }
         }
         for (int left = 0, right = postOrderList.size() - 1; left < right; left++, right--) {
