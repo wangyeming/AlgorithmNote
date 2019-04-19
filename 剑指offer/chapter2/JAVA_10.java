@@ -20,19 +20,13 @@ public class JAVA_10 {
 
     //非递归算法
     public static long fibonacci2(int n) {
-        int[] result = {0, 1};
-        if (n < 2) {
-            return result[n];
+        if(n < 2) return n;
+        int valueN = 0, value0 = 0, value1 = 1;
+        for(int i = 2; i <= n ; i++) {
+            valueN = value0 + value1;
+            value0 = value1;
+            value1 = valueN;
         }
-        long valueN = 0;
-        long value1 = 0;
-        long value2 = 1;
-        for (int i = 2; i <= n; i++) {
-            valueN = value1 + value2;
-            value1 = value2;
-            value2 = valueN;
-        }
-
         return valueN;
     }
 

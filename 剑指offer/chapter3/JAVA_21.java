@@ -7,7 +7,7 @@ import java.util.Arrays;
  * <p>
  * [2,3,4,5,6,6] => [3,5,2,4,6,6]
  * <p>
- * 考察点：前后指针
+ * 考察点：左右指针
  */
 public class JAVA_21 {
 
@@ -21,17 +21,16 @@ public class JAVA_21 {
         if (array.length <= 1) {
             return;
         }
-        int start = 0;
-        int end = array.length - 1;
-        while (start < end) {
-            while (start < end && isOdd(array[start])) {
-                start++;
+        int left = 0, right = array.length - 1;
+        while (left < right) {
+            while (left < right && isOdd(array[left])) {
+                left++;
             }
-            while (end > start && !isOdd(array[end])) {
-                end--;
+            while (right > left && !isOdd(array[right])) {
+                right--;
             }
-            if (start < end) {
-                swap(array, start, end);
+            if (left < right) {
+                swap(array, left, right);
             }
         }
     }

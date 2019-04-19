@@ -34,21 +34,19 @@ public class JAVA_35 {
         node4.sibling = node1;
         node5.sibling = node2;
         node6.sibling = node6;
-        node7.sibling = node2;
+        node7.sibling = null;
 
         System.out.println("原链表为：");
         printLinkList(node1);
 
         ComplexListNode cloneHead = cloneComplexLinkList(node1);
-        System.out.println("原链表为：");
-        printLinkList(node1);
         System.out.println("复制链表为：");
         printLinkList(cloneHead);
     }
 
     //思路1：第一步复制节点和next，生成新链表，第二步扫描每个节点的复杂指针，然后从头开始找到复杂指针对应的位置
     //再在新链表中找到复杂指针对应的复制节点，重构复杂指针  时间复杂度O(n^2)
-    //思路2: 借助O(n)的空间，将原节点和复制节点一一对应上，节省找到复杂节点的位置。
+    //思路2: 借助O(n)的Hash表，将原节点和复制节点一一对应上，节省找到复杂节点的位置。
     //时间复杂度O(n) 空间复杂度O(n^2)
     //思路3：巧妙利用复制节点可以插在原节点后面，来保证找到复杂节点的位置的同时，节省空间。
     //时间复杂度O(n) 空间复杂度O(1)
@@ -81,7 +79,7 @@ public class JAVA_35 {
         ComplexListNode node = head;
         while (node != null) {
             ComplexListNode copyNode = node.nextNode;
-            copyNode.sibling = node.sibling.nextNode;
+            if(node.sibling != null) copyNode.sibling = node.sibling.nextNode;
             node = copyNode.nextNode;
         }
     }

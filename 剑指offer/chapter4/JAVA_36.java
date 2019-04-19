@@ -42,19 +42,28 @@ public class JAVA_36 {
             if (head.rightNode != null) {
                 System.out.print("->");
             }
+            if(head.rightNode == null) break;
             head = head.rightNode;
+        }
+        System.out.println();
+        while (head != null) {
+            System.out.print(head.value);
+            if (head.leftNode != null) {
+                System.out.print("->");
+            }
+            head = head.leftNode;
         }
     }
 
     public static BinaryTreeNode convert(BinaryTreeNode root) {
-        BinaryTreeNode lastNode = _convert(root, null);
+        _convert(root, null);
 //        BinaryTreeNode[] lastNodeArray = new BinaryTreeNode[]{null};
 //        _convert(root, lastNodeArray);
 //        BinaryTreeNode lastNode = lastNodeArray[0];
-        while (lastNode != null && lastNode.leftNode != null) {
-            lastNode = lastNode.leftNode;
+        while (root != null && root.leftNode != null) {
+            root = root.leftNode;
         }
-        return lastNode;
+        return root;
     }
 
     //借鉴了指针的概念
@@ -89,20 +98,15 @@ public class JAVA_36 {
     //可以用递归的方式去做：
     //对于每个节点而言，先递归处理左子树，保证该结点左边全都排序，然后，把该结点当做上一个元素，递归处理下一个节点
     private static BinaryTreeNode _convert(BinaryTreeNode node, BinaryTreeNode lastNode) {
-        if (node == null) {
-            return null;
-        }
+        if (node == null) return null;
         System.out.println(node);
-        if (node.leftNode != null) {
-            //处理左子树
-            lastNode = _convert(node.leftNode, lastNode);
-        }
-        //父节点和左子树   左右关联  lastNode--(right)-->node
-        //                       node<--(left)--lastNode
-        System.out.println("connect " + lastNode + " and " + node);
-
-        node.leftNode = lastNode;
+        //处理左子树
+        if (node.leftNode != null) lastNode = _convert(node.leftNode, lastNode);
+        //父节点和左子树   左右关联  lastNode  --(right)--> node
+        //                       lastNode <--(left )--  node
+        System.out.println("connect " + node + " and " + lastNode);
         if (lastNode != null) {
+            node.leftNode = lastNode;
             lastNode.rightNode = node;
         }
 
@@ -110,10 +114,8 @@ public class JAVA_36 {
         System.out.println("lastNodeArray " + lastNode);
 
         //当前节点的左子树关系已经处理好了，现在处理右子树，需要手动传入当前节点
-        if (node.rightNode != null) {
-            //处理右子树
-            lastNode = _convert(node.rightNode, lastNode);
-        }
+        //处理右子树
+        if (node.rightNode != null) lastNode = _convert(node.rightNode, lastNode);
         return lastNode;
     }
 }

@@ -10,6 +10,9 @@ public class ListNode {
     public int value;
     public ListNode nextNode = null;
 
+    public ListNode() {
+    }
+
     @Override
     public String toString() {
         return "" + value;

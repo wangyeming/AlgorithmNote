@@ -2,7 +2,7 @@ package chapter1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -11,28 +11,25 @@ import java.util.List;
 public class java_1_3_1 {
 
     public static void main(String[] argv) {
-        String str = "ABC";
-        List<String> results = permutation2(str);
+        String str = "aa";
+        List<String> results = permutation1(str);
         System.out.println(results.size());
         System.out.println(results);
     }
 
     //递归实现
     public static List<String> permutation1(String str) {
-        List<String> result = new ArrayList<>();
+        HashSet<String> resultSet = new HashSet<>();
         if (str == null || str.length() <= 0) {
-            return result;
+            return new ArrayList<>();
         }
-        _permutation1(str.toCharArray(), 0, str.length() - 1, result);
-        return result;
+        _permutation1(str.toCharArray(), 0, str.length() - 1, resultSet);
+        return new ArrayList<>(resultSet);
     }
 
     //思路是：第一次第一位固定为a，后面bc，然后交换为cb，第二次第一位固定为b，后面ac，然后交换为ca
     //递归的写法，时间复杂度是O(n!)
-    public static void _permutation1(char[] chars, int from, int to, List<String> result) {
-        if (from < 0 || to < from || to >= chars.length) {
-            return;
-        }
+    public static void _permutation1(char[] chars, int from, int to, HashSet<String> result) {
         if (from == to) {
             result.add(Arrays.toString(chars));
             return;

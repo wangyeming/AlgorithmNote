@@ -46,9 +46,10 @@ public class JAVA_16 {
         double result = _power(base, exponent >> 1);
         result *= result;
         //利用与1做位与，判断奇偶数
-        if ((exponent & 0x1) == 1) {
+        if ((exponent & 1) == 1) {
             result *= base;
         }
         return result;
     }
 }
+

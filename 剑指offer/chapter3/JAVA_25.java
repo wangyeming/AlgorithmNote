@@ -45,14 +45,7 @@ public class JAVA_25 {
             return listNode1;
         }
 
-        ListNode mergeHead = null;
-        if (listNode1.value <= listNode2.value) {
-            mergeHead = listNode1;
-            listNode1 = listNode1.nextNode;
-        } else {
-            mergeHead = listNode2;
-            listNode2 = listNode2.nextNode;
-        }
+        ListNode mergeHead = new ListNode(-1);
         ListNode node = mergeHead;
         while (listNode1 != null && listNode2 != null) {
             if (listNode1.value <= listNode2.value) {
@@ -65,7 +58,7 @@ public class JAVA_25 {
             node = node.nextNode;
         }
         node.nextNode = listNode1 != null ? listNode1 : listNode2;
-        return mergeHead;
+        return mergeHead.nextNode;
     }
 
     private static void test(int[] nodeValues1, int[] nodeValues2) {

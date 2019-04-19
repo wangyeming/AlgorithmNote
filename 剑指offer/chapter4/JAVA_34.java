@@ -3,6 +3,7 @@ package chapter4;
 import base.BinaryTreeNode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -40,6 +41,7 @@ public class JAVA_34 {
         binaryTreeNode5.leftNode = binaryTreeNode7;
         binaryTreeNode4.leftNode = binaryTreeNode9;
         findPath(binaryTreeNode1, 16);
+
     }
 
     public static void findPath(BinaryTreeNode binaryTreeNode, int expectedSum) {
@@ -47,7 +49,8 @@ public class JAVA_34 {
         findPath(binaryTreeNode, expectedSum, 0, currentPath);
     }
 
-    private static void findPath(BinaryTreeNode binaryTreeNode, int expectedSum, int currentSum, List<BinaryTreeNode> currentPath) {
+    private static void findPath(BinaryTreeNode binaryTreeNode, int expectedSum, int currentSum,
+                                 List<BinaryTreeNode> currentPath) {
         currentSum += binaryTreeNode.value;
         currentPath.add(binaryTreeNode);
         boolean isLeaf = binaryTreeNode.leftNode == null && binaryTreeNode.rightNode == null;
@@ -57,7 +60,6 @@ public class JAVA_34 {
                 System.out.print(binaryTreeNode1.value + "\t");
             }
             System.out.println();
-            return;
         }
         if (binaryTreeNode.leftNode != null) {
             findPath(binaryTreeNode.leftNode, expectedSum, currentSum, currentPath);
