@@ -41,8 +41,10 @@ public class java_1_1_2 {
         }
         while (start < end) {
             char tmp = chars[start];
-            chars[start++] = chars[end];
-            chars[end--] = tmp;
+            chars[start] = chars[end];
+            chars[end] = tmp;
+            start++;
+            end--;
         }
     }
 }
