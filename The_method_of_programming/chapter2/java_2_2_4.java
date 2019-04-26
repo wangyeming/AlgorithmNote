@@ -11,7 +11,7 @@ import java.util.List;
  * 输入一个整数数组，在数组中查找三个数，满足他们的和正好是0。
  * 不可以重复利用数组中同样的元素，返回所有符合条件的元素组合。
  */
-public class JAVA_2_2_4 {
+public class java_2_2_4 {
 
     public static void main(String[] argv) {
         int[] nums = {1, -3, 1, -3, 1, 1, 2, -3, 2, -4};

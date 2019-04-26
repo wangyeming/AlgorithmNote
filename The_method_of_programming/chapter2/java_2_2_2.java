@@ -11,7 +11,7 @@ import java.util.List;
  * 输入一个整数数组和一个整数，在数组中查找一对数，满足他们的和正好是输入的那个整数。
  * 不可以重复利用数组中同样的元素
  */
-public class JAVA_2_2_2 {
+public class java_2_2_2 {
 
     //三数之和为0的话，a+b+c=0 => a+b=-c
     public static void main(String[] argv) {

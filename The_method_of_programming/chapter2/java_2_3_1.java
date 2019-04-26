@@ -8,7 +8,7 @@ import java.util.List;
  * <p>
  * 输入两个整数n和sum,要求从数列1,2,3,...,n中随意取出几个数，使得它们的和等于sum，请将所有可能的组合列出来。
  */
-public class JAVA_2_3_1 {
+public class java_2_3_1 {
 
     public static void main(String[] argv) {
         List<List<Integer>> results = sumOfK(20, 8);

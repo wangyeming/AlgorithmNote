@@ -57,7 +57,7 @@
 
 * [寻找和为定值的两个数](./chapter2/java_2_2_1.java)
 
-* [寻找树中和为定值的所有路径(同剑指offer34题)](../剑指offer/chapter4/JAVA_34.java)
+* [寻找树中和为定值的所有路径(同剑指offer34题)](../剑指offer/chapter4/java_34.java)
 
 * [寻找和为定值的两个数的下标](./chapter2/java_2_2_3.java)
 
@@ -66,3 +66,14 @@
 2.3 寻找和为定值的多个数
 
 * [寻找和为定值的多个数](./chapter2/java_2_3_1.java)
+
+2.4 最大连续子数组和
+
+* [最大连续子数组和](./chapter2/java_2_4_1.java)
+
+* [二维数组最大连续子数组](./chapter2/java_2_4_2.java)
+
+* [乘积最大子序列](./chapter2/java_2_4_3.java)
+
+* [长度最小的子数组](./chapter2/java_2_4_4.java)
+

@@ -4,7 +4,7 @@ package chapter2;
  * <p>
  * 有n个数，输出其中所有和为s的k个数的组合
  */
-public class JAVA_2_3_4 {
+public class java_2_3_4 {
 
     public static void main(String[] argv) {
 
