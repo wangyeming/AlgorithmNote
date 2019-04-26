@@ -77,3 +77,11 @@
 
 * [长度最小的子数组](./chapter2/java_2_4_4.java)
 
+2.5 跳台阶问题
+
+* [跳台阶问题/兔子繁殖问题](../剑指offer/chapter2/JAVA_10.java)
+
+* [换硬币问题](./chapter2/java_2_5_3.java)
+
+* []()
+
