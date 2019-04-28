@@ -20,11 +20,10 @@ public class java_2_5_3 {
         results[0] = 1;
         if (money <= 0) return 0;
         for (int coin : COINS) {
-            for (int j = coin; j <= money; j++) {
-                results[j] += results[j - coin];
+            for (int i = coin; i <= money; i++) {
+                results[i] += results[i - coin];
             }
         }
         return results[money];
     }
-
 }

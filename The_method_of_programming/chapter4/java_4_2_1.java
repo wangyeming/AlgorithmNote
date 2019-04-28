@@ -2,7 +2,9 @@ package chapter4;
 
 import java.util.Arrays;
 
-//求杨氏矩阵的行列数
+/**
+ * 行列递增矩阵的查找
+ */
 public class java_4_2_1 {
 
     public static void main(String[] argv) {
