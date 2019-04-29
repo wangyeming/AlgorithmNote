@@ -90,3 +90,15 @@
 2.7 荷兰国旗
 
 * [荷兰国旗](./chapter2/java_2_7_1.java)
+
+### 第三章先空缺
+
+### [Chapter4](./chapter4)
+
+* [有序数组的查找](./chapter4/java_4_1.java)
+
+* [行列递增矩阵的查找](./chapter4/java_4_2_1.java)
+
+* [数组中出现次数超过一半的数字](../剑指offer/chapter5/JAVA_39.java)
+
+* [出现次数刚好是一半的数](./chapter4/java_4_3_2.java)
