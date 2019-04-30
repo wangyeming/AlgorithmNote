@@ -3,10 +3,10 @@ package chapter3;
 import base.ListNode;
 
 /**
- * s
+ * 链表中环的入口节点
  * <p>
  * 如果一个链表中包含环，如何照出环的入口节点
- *
+ * <p>
  * 考察点：链表的理解，拆分成子问题的能力
  */
 public class JAVA_23 {
@@ -36,19 +36,19 @@ public class JAVA_23 {
     //2. 计算环的长度 快慢指针相遇于node i，i一定位于环内，原地绕一圈回到原点经过的节点个数即为环的长度k
     //3. 前指针先走k步，后指针再和前指针一起走，相遇处即为环的入口
     public static ListNode findCircleStart(ListNode head) {
-        if(head == null) {
+        if (head == null) {
             return null;
         }
         ListNode meetingNode = meetingNode(head);
-        if(meetingNode == null) {
+        if (meetingNode == null) {
             return null;
         }
         int loopLength = geLoopLength(meetingNode);
         ListNode slow = head, fast = head;
-        for(int i= 0;i < loopLength;i++) {
+        for (int i = 0; i < loopLength; i++) {
             fast = fast.nextNode;
         }
-        while(fast != slow) {
+        while (fast != slow) {
             slow = slow.nextNode;
             fast = fast.nextNode;
         }
@@ -56,18 +56,18 @@ public class JAVA_23 {
     }
 
     private static ListNode meetingNode(ListNode head) {
-        if(head == null) {
+        if (head == null) {
             return null;
         }
         ListNode slow = head;
         ListNode fast = slow.nextNode;
-        while(fast != null && slow != null) {
-            if(fast == slow) {
+        while (fast != null && slow != null) {
+            if (fast == slow) {
                 return fast;
             }
             slow = slow.nextNode;
             fast = fast.nextNode;
-            if(fast != null) {
+            if (fast != null) {
                 fast = fast.nextNode;
             }
         }
@@ -77,7 +77,7 @@ public class JAVA_23 {
     private static int geLoopLength(ListNode nodeInLoop) {
         ListNode loopNode = nodeInLoop.nextNode;
         int loopLength = 1;
-        for(;loopNode != nodeInLoop;loopLength++) {
+        for (; loopNode != nodeInLoop; loopLength++) {
             loopNode = loopNode.nextNode;
         }
         return loopLength;

@@ -5,6 +5,7 @@
  */
 public class Java_23 {
 
+    //这里的思路是分治-二路归并，也就是两两合并
     public static ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) return null;
         ListNode newHead = null;
